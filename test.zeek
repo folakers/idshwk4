@@ -1,9 +1,9 @@
 @load base/protocols/conn
 @load base/protocols/http
 
-global ip_statistic: table[addr] of table[string] of count; # 以ip地址为键，存放每个ip的请求数据统计
-global ip_404_sets: table[addr] of set[string]; # 以ip地址为键，存放每个ip请求的url中出现404的url
-global ip_time: table[addr] of time;  # 以ip地址为键，存放时间统计数据
+global ip_statistic: table[addr] of table[string] of count; 
+global ip_404_sets: table[addr] of set[string]; 
+global ip_time: table[addr] of time;  
 global ip_interval: interval = 10min;
 
 global analyse: function(ip: addr);
